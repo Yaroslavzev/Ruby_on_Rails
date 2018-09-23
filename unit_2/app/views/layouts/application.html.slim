@@ -12,11 +12,13 @@ html
   .header
     ul.menu
       li
-        a href="#"  HOME
+        = link_to "HOME", root_path
       li
-        a href="#"  ABOUT ME
-    .page_name
+        = link_to "ABOUT ME", home_about_me_path
 
+    .page_name
+        / Page name variable
+        h1 = @page_name || "Unknown page"
 
   = yield
   .footer
