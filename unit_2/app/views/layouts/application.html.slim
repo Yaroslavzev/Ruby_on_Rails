@@ -2,10 +2,22 @@ doctype html
 html
   head
     title
-      | Unit2
+      | site for Unit2
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   body
-    = yield
+
+  .header
+    ul.menu
+      li
+        a href="#"  HOME
+      li
+        a href="#"  ABOUT ME
+    .page_name
+
+
+  = yield
+  .footer
+    | &copy#{Time.current.year} Yaroslavzev. All rights reserved.
