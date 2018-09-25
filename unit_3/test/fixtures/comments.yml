@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  user: one
+  post: one
+  visible: false
+  invoke: MyString
+  active_record: MyString
+
+two:
+  body: MyText
+  user: two
+  post: two
+  visible: false
+  invoke: MyString
+  active_record: MyString
