@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title
+      | site for Unit2
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+
+  .header
+    ul.menu
+      li
+        = link_to "HOME", root_path
+      li
+        = link_to "ABOUT ME", home_about_me_path
+
+    .page_name
+        / Page name variable
+        h1 = @page_name || "Unknown page"
+
+  = yield
+  .footer
+    | &copy#{Time.current.year} Yaroslavzev. All rights reserved.
