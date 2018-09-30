@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: yaroslavzev
-  database: unit_3
+  database: unit_4
 
 development:
   <<: *default
