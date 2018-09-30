@@ -40,11 +40,15 @@ hash_comments = 200.times.map do
 end
 Comment.create! hash_comments
 
-hash_seos = 200.times.map do {
-  title: FFaker::HipsterIpsum.paragraphs,
+hash_seos = 200.times.map do
+  commentable = ((rand(2) == 1) ? posts : users).sample
+  {title: FFaker::HipsterIpsum.paragraphs,
   description: FFaker::HipsterIpsum.paragraphs,
-  keywords: FFaker::HipsterIpsum.paragraphs
-}
+  keywords: FFaker::HipsterIpsum.paragraphs,
+  seontable_id: commentable.id,
+  seontable_type: commentable.class.to_s
+  }
+
 end
 
 Seo.create! hash_seos

@@ -13,7 +13,7 @@ require 'rails/commands'
 
 
 
-p ap Post.columns
+p ap Seo.columns
  #number_moder
 #Post.first.user.name
 
