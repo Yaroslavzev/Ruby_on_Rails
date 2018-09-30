@@ -10,8 +10,11 @@ require 'rails/commands'
 
 #p ap Post.find(21)
 
-#uuu = User.first
 
-p ap User.pluck(:name, :comments_count)
+
+
+p ap User.posts_of_moderators
+ #number_moder
+#Post.first.user.name
 
 #p ap ссс.commentators.pluck(:name)
