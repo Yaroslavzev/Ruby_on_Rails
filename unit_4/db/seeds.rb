@@ -39,3 +39,12 @@ hash_comments = 200.times.map do
   }
 end
 Comment.create! hash_comments
+
+hash_seos = 200.times.map do {
+  title: FFaker::HipsterIpsum.paragraphs,
+  description: FFaker::HipsterIpsum.paragraphs,
+  keywords: FFaker::HipsterIpsum.paragraphs
+}
+end
+
+Seo.create! hash_seos
