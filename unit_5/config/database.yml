@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: blog_dev
+  username: alexeyivanov
+
+test:
+  adapter: postgresql
+  database: blog_test
+  username: alexeyivanov
+
+staging:
+  adapter: postgresql
+  database: blog_staging
+  username: alexeyivanov
+
+production:
+  adapter: postgresql
+  database: blog_staging
+  username: alexeyivanov
