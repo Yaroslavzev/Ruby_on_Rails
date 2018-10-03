@@ -1,21 +1,17 @@
-development:
+
+default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: blog_dev
-  username: alexeyivanov
+  username: yaroslavzev
+  database: unit_4
+
+development:
+  <<: *default
 
 test:
-  adapter: postgresql
-  database: blog_test
-  username: alexeyivanov
+  <<: *default
 
-staging:
-  adapter: postgresql
-  database: blog_staging
-  username: alexeyivanov
 
 production:
-  adapter: postgresql
-  database: blog_staging
-  username: alexeyivanov
+  <<: *default
