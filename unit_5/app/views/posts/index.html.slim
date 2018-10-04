@@ -1,12 +1,12 @@
 h1 Listing posts
 
-table
+table class="post_head"
   thead
     tr
       th Title
       th Body
       th User
-      th Visible
+      / th Visible
       th
       th
       th
@@ -20,5 +20,5 @@ br
 p
   = link_to 'New Post', new_post_path
 
-p
+p class="pagination"
  = paginate  @posts

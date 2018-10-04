@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,700');
+
+ body {
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ h1 {
+   list-style-type: none;
+   font-weight: 700;
+   color: #212121;
+   padding-bottom: 50px;
+ }
+
+ field {
+   padding: 0 14px 8px;
+ }
+
+ .post_head thead tr th{
+   font-weight: 700;
+   color: #212121;
+ }
+
+ .post_body, .user_body td{
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 300;
+   color: #212121;
+   a {
+     font-weight: 300;
+     text-decoration: none;
+     color: #8c8c8c;
+   }
+   a:hover{
+     border-bottom: 3px solid #8c8c8c;
+   }
+ }
+
+ .user_body td, th{
+   padding-bottom: 20px;
+   padding-left: 5px;
+   padding-right: 15px;
+   &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+     padding-right: 40px;
+   }
+}
+.pagination span{
+  margin-left: 10px;
+}
