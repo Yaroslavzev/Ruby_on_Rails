@@ -12,6 +12,16 @@ p
 p
   strong Visible:
   = @post.visible
+p
+  strong  Comments:
+  table
+   -@comments.each  do  |comment|
+    tr
+      td: b  = comment.user.name
+      td  = comment.body
+      
+p class="pagination"
+  = paginate  @comments
 
 => link_to 'Edit', edit_post_path(@post)
 '|
