@@ -1,4 +1,5 @@
 import  "./page.css" ;
+
 window.onload  =  function ()  {
   let elem  = document.getElementById( 'hello' );
   console.log(elem.innerText );
