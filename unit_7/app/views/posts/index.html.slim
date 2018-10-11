@@ -1,0 +1,24 @@
+h1 Listing posts
+
+table class="post_head"
+  thead
+    tr
+      th Title
+      th Body
+      th User
+      th Visible
+      th
+      th
+      th
+
+  tbody
+    = render  partial:  'post' , collection:  @posts
+
+
+br
+
+p
+  = link_to 'New Post', new_post_path
+
+p class="pagination"
+ = paginate  @posts

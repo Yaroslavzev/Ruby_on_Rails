@@ -1,0 +1,18 @@
+div class="devise"
+ h2  = t('label.log_in')
+ = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+   .field
+     = t('label.email')
+     br
+     = f.email_field :email, autofocus: true, autocomplete: "email"
+   .field
+     = t('label.password')
+     br
+     = f.password_field :password, autocomplete: "current-password"
+   - if devise_mapping.rememberable?
+     .field
+       = f.check_box :remember_me
+       = t('label.remember_me')
+   .actions
+     = f.submit "Авторизироваться"
+ = render "devise/shared/links"
