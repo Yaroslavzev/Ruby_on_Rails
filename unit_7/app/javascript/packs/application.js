@@ -9,6 +9,7 @@
 import  "init" ;
 import  "components/page/page";
 import "stylesheets/application.scss";
+import  "bootstrap";
 
 // import  "./application.css"
 // window.onload  =  function (){

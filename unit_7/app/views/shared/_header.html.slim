@@ -1,18 +1,19 @@
 header
-  ul
+
+  ul.nav.nav-pills
     - if user_signed_in?
       li
         span  = t('label.hello') % current_user.name
-      li
+      li.activ
         = link_to t('label.log_out'), destroy_user_session_path, method:  :delete
-    - else
-      li
+    -else
+      li.activ
         = link_to  t('label.login'), new_user_session_path
-      li
+      li.activ
         = link_to  t('label.registration'), new_user_registration_path
 
 
-  ul
+  ul.nav.nav-pills
 
     - if user_signed_in?
       li

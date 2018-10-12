@@ -14,6 +14,10 @@
  *= require_self
  */
 
+// @import "home", "posts", "scaffolds","users";
+
+
+
 
 
  @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,700');
@@ -23,9 +27,21 @@
  }
 
 header {
+  min-height: 100px;
+
+  ul.nav.nav-pills {
+    float: right;
+    li {padding: 0 14px 8px;}
+    + ul.nav.nav-pills {
+      float: left;
+    }
+  }
+
+}
+/*header {
   width: 100%;
 
-  min-height: 80px;
+  min-height: 100px;
     ul{
    float: right;
    list-style-type: none;
@@ -39,7 +55,7 @@ header {
     font-size: 14px;
     font-weight: 300;
     padding: 0 14px 8px;
-    /*margin: 0 1px;*/
+
   }
 
   li a:hover {
@@ -47,7 +63,7 @@ header {
     color: #212121;
     border-bottom: 3px solid black;
   }}
-}
+}*/
 
 
  h1 {
@@ -93,9 +109,13 @@ header {
 }
 
 .devise {
-  text-align:center;
-  .field {
-    padding-bottom: 20px;
+padding-left: 30%;
+padding-right: 30%;
+ h2{
+   padding-left: 35%;
+ }
+ .devise_2{
+   padding-left: 5%;
+ }
 
-  }
 }
