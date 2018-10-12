@@ -8,8 +8,9 @@
 // layout file, like app/views/layouts/application.html.erb
 import  "init" ;
 import  "components/page/page";
+import "stylesheets/application.scss";
 
-import  "./application.css"
-window.onload  =  function (){
-  document.body.insertAdjacentHTML ( "afterbegin" ,  "Hello Webpack!" );
-};
+// import  "./application.css"
+// window.onload  =  function (){
+//  document.body.insertAdjacentHTML ( "afterbegin" ,  "Hello Webpack!" );
+// };

@@ -10,3 +10,17 @@ header
         = link_to  t('label.login'), new_user_session_path
       li
         = link_to  t('label.registration'), new_user_registration_path
+
+
+  ul
+
+    - if user_signed_in?
+      li
+        = link_to 'Мои данные', user_path(current_user.id)
+      li
+        = link_to 'Мои комменты', users_path
+      - if user_signed_in? && current_user.moderator?
+        li
+          = link_to 'Посты', posts_path
+        li
+          = link_to 'Пользователи', users_path

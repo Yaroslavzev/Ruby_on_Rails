@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Unit7
   class Application < Rails::Application
+    #config.assest.precompile += %w(*.png *.jpg *.ipeg *.gif)
     # Initialize configuration defaults for originally generated Rails version.
     config.i18n.default_locale  =  :ru
     config.time_zone  =  'Moscow'
