@@ -1,30 +1,35 @@
 div class="devise"
- h2
-   | Регистрация
- = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  h2 Регистрация
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form.form-horizontal"}) do |f|
    = devise_error_messages!
-   .field
-     = t('label.name')
-     br
-     = f.text_field  :name , autofocus:  true
-     br
-   .field
-     = t('label.email')
-     br
-     = f.email_field :email, autofocus: true, autocomplete: "email"
-   .field
-     = t('label.password')
-     - if @minimum_password_length
+   .form-group
+     .col-sm-2.control-label
+      = t('label.name')
+     .col-sm-10
+      = f.text_field  :name , autofocus:  true, autocomplete: "email", class: "form-control", placeholder: "Name"
+   .form-group
+     .col-sm-2.control-label
+       = t('label.email')
+     .col-sm-10
+       = f.email_field :email, autofocus: true, autocomplete: "email", autocomplete: "email", class: "form-control", placeholder: "Email"
+   .form-group
+     .col-sm-2.control-label
+      = t('label.password')
+      - if @minimum_password_length
        em
          | (
          = @minimum_password_length
          |  символов минимум)
-     br
-     = f.password_field :password, autocomplete: "new-password"
-   .field
-     = t('label.password_confirmation')
-     br
-     = f.password_field :password_confirmation, autocomplete: "new-password"
-   .actions
-     = f.submit "Зарегистрироваться"
- = render "devise/shared/links"
+     .col-sm-10
+       = f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password"
+   .form-group
+    .col-sm-2.control-label
+      = t('label.password_confirmation')
+    .col-sm-10
+      = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password"
+   .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit "Зарегистрироваться", class: "btn btn-success"
+
+  .devise_2
+   = render "devise/shared/links"
